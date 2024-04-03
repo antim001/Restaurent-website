@@ -5,7 +5,7 @@ import './Feature.css'
 
 const Featured = () => {
     return (
-        <div className='feature-img mb-10 mt-10 pt-10'>
+        <div className='feature-img  bg-fixed mb-10 mt-10 pt-10'>
             <SectionTitle
                  subHeading='-------check-it-out--------'
                  heading='Featured items'
@@ -13,7 +13,7 @@ const Featured = () => {
 
 
             </SectionTitle>
-            <div className='md:flex justify-center items-center py-16 px-32'>
+            <div className='md:flex justify-center items-center py-16 px-32  bg-slate-500 bg-opacity-60 '>
                 <div>
                     <img src={featureImg} alt="" />
                 </div>
@@ -23,6 +23,7 @@ const Featured = () => {
                     <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Doloremque eos repudiandae sunt ut. Officia impedit delectus dolores totam incidunt repellendus. Esse accusantium, aperiam deleniti sit mollitia a nam nisi rerum modi maiores magnam temporibus quia maxime nihil architecto, labore sapiente doloribus reprehenderit. 
                         Quod beatae delectus reiciendis, provident temporibus iste molestias.</p>
+                <button className='btn btn-outline text-white mt-5 border-0 border-b-4'>Order Now</button>
                 </div>
             </div>
         </div>
