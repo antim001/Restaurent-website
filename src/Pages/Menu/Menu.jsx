@@ -10,6 +10,7 @@ import soupImg from '../../assets/menu/soup-bg.jpg';
 import saladImg from '../../assets/menu/salad-bg.jpg';
 import pizzaImg from '../../assets/menu/pizza-bg.jpg';
 import MenuItem from './../../Shared/MenuItem/MenuItem';
+import OrderFoodCard from './../../Shared/OrderFoodCard/OrderFoodCard';
 
 
 const Menu = () => {
@@ -30,10 +31,13 @@ const Menu = () => {
             <Cover img={banner} title ="OUR MENU"></Cover>
             <SectionTitle heading='Todays Offer' subHeading="don't miss it"></SectionTitle>
         <MenuCategory item={offered}></MenuCategory>
-        <MenuCategory item={dessert} coverImg={desertImg} title="Dessert"></MenuCategory>
+        
         <MenuCategory item={salad} coverImg={saladImg} title="Salad"></MenuCategory>
-        <MenuCategory item={soup} coverImg={saladImg} title="Soup"></MenuCategory>
         <MenuCategory item={pizza} coverImg={pizzaImg} title="Pizza"></MenuCategory>
+        <MenuCategory item={soup} coverImg={saladImg} title="Soup"></MenuCategory>
+     
+        <MenuCategory item={dessert} coverImg={desertImg} title="Dessert"></MenuCategory>
+       
 
         
         </div>
