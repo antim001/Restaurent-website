@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import { AuthContext } from './../../AuthProvider/AuthProvider';
-
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = () => {
   const {logOut,user}=useContext(AuthContext)
@@ -16,9 +16,11 @@ const handleLogout=()=>{
         <li className='text-orange-400 font-bold'>
           <Link to='/menu'> Our Menu</Link>
         </li>
+       
 
 <li className='text-orange-400 font-bold'><Link to="/order/salad">Order Now</Link></li>
 <li className='text-orange-400 font-bold'><Link to="/secret">Secret</Link></li>
+
         {
           user ? <>
           <button onClick={handleLogout} className='text-orange-400 font-bold'>Log Out</button>         </>
@@ -47,9 +49,29 @@ const handleLogout=()=>{
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Antim</a>
+ 
+          <Link to='/'>
+          <button className="btn bg-orange-600">
+          <AiOutlineShoppingCart />
+              <div className="badge badge-secondary">+0</div>
+           </button></Link>
+       
+  <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        </div>
+      </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li>
+          {user?user.displayName:"user"}
+        </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
+  </div>
+
     );
 };
 
