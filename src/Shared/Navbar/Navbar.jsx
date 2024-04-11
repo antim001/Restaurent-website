@@ -2,9 +2,11 @@ import {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import { AuthContext } from './../../AuthProvider/AuthProvider';
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import useCart from './../../hooks/useCart';
 
 const Navbar = () => {
   const {logOut,user}=useContext(AuthContext)
+  const [cart]=useCart();
 
 const handleLogout=()=>{
   logOut()
@@ -53,7 +55,7 @@ const handleLogout=()=>{
           <Link to='/'>
           <button className="btn bg-orange-600">
           <AiOutlineShoppingCart />
-              <div className="badge badge-secondary">+0</div>
+              <div className="badge badge-secondary">+{cart.length}</div>
            </button></Link>
        
   <div className="dropdown dropdown-end">
