@@ -5,6 +5,7 @@ import { FaCalendarWeek } from "react-icons/fa";
 import { MdOutlinePayment } from "react-icons/md";
 import { BsListCheck } from "react-icons/bs";
 import { VscPreview } from "react-icons/vsc";
+import { CiSearch } from "react-icons/ci";
 
 const DashBoard = () => {
     return (
@@ -30,9 +31,20 @@ const DashBoard = () => {
                         <li><NavLink to='/dashboard/bookings'>
                        < BsListCheck/>
                         My bookings</NavLink></li>
+                        <div className="divider"></div>
+                        <li><NavLink to='/'>
+                <AiFillHome/>
+                        Home</NavLink></li>
+
+                        <li><NavLink to='/menu'>
+                
+                <CiSearch></CiSearch>
+                        Menu</NavLink></li>
                 </ul>
+              
+                
             </div>
-            <div className='flex-1s'>
+            <div className='flex-1 p-8'>
                 <Outlet></Outlet>
             </div>
         </div>
