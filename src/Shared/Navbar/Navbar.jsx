@@ -52,7 +52,7 @@ const handleLogout=()=>{
   </div>
   <div className="navbar-end">
  
-          <Link to='/'>
+          <Link to='/dashboard/cart'>
           <button className="btn bg-orange-600">
           <AiOutlineShoppingCart />
               <div className="badge badge-secondary">+{cart.length}</div>
