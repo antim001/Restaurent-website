@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form"
 import {useContext} from 'react'
 import { AuthContext } from './../../AuthProvider/AuthProvider';
 import useAxiosPublic from './../../hooks/useAxiosPublic';
+import SocialLogin from './../../Shared/SocialLogin/SocialLogin';
 
 const Register = () => {
   const axiosPublic=useAxiosPublic();
@@ -95,7 +96,12 @@ const Register = () => {
         <div className="form-control mt-6">
         <input className='btn btn-primary' type="submit" value="Register" />
         </div>
-        <h2>Already have account? <Link to='/login'><span className='font-medium'>Log In</span></Link></h2>
+        
+<h2>Already have account? <Link to='/login'><span className='font-medium'>
+  Log In</span></Link></h2>
+   <div className='text-center mx-auto'>
+   <SocialLogin></SocialLogin>
+   </div>
       </form>
     </div>
   </div>
