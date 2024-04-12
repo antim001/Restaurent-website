@@ -6,32 +6,47 @@ import { MdOutlinePayment } from "react-icons/md";
 import { BsListCheck } from "react-icons/bs";
 import { VscPreview } from "react-icons/vsc";
 import { CiSearch } from "react-icons/ci";
-
+import { BsEnvelopeFill } from "react-icons/bs";
+import useCart from './../hooks/useCart';
+import { FaUtensils } from "react-icons/fa";
+import { FaList } from "react-icons/fa";
+import { CiBookmarkCheck } from "react-icons/ci";
+import { LuUsers2 } from "react-icons/lu";
 const DashBoard = () => {
+    
+   const isAdmin=true
     return (
         <div className='flex'>
             <div className='w-64 min-h-screen bg-orange-400'>
                 <ul className='menu p-4'>
-                <li><NavLink to='/dashboard/userhome'>
+                    {
+                        isAdmin?<>
+                        <li><NavLink to='/dashboard/adminhome'>
                 <AiFillHome/>
-                        User Home</NavLink></li>
-                        <li><NavLink to='/dashboard/reservartion'>
-                    <FaCalendarWeek></FaCalendarWeek>
-                        My reservation</NavLink></li>
+                        Admin Home</NavLink></li>
+                        <li><NavLink to='/dashboard/additems'>
+                        <FaUtensils/>
+                       Add items</NavLink></li>
 
-                        <li><NavLink to='/dashboard/cart'>
-                    <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                        My Cart</NavLink></li>
-                    <li><NavLink to='/dashboard/review'>
-                    <VscPreview></VscPreview>
-                        feedback</NavLink></li>
-                        <li><NavLink to='/dashboard/payments'>
-                  < MdOutlinePayment/>
-                        Payment</NavLink></li>
-                        <li><NavLink to='/dashboard/bookings'>
-                       < BsListCheck/>
-                        My bookings</NavLink></li>
+                        <li><NavLink to='/dashboard/manageitems'>
+                    
+                           <FaList></FaList>
+                        Manage Items</NavLink></li>
+                    <li><NavLink to='/dashboard/managebookings'>
+                    <CiBookmarkCheck/>
+                      Manage Bookings  </NavLink></li>
+                        <li><NavLink to='/dashboard/allusers'>
+                        <LuUsers2/>
+                       All users</NavLink></li>
+                        
+                        </>:
+                        <>
+                        
+                        </>
+                    }
+                
                         <div className="divider"></div>
+
                         <li><NavLink to='/'>
                 <AiFillHome/>
                         Home</NavLink></li>
@@ -40,6 +55,11 @@ const DashBoard = () => {
                 
                 <CiSearch></CiSearch>
                         Menu</NavLink></li>
+
+                        <li><NavLink to='/order/contact'>
+                
+                <BsEnvelopeFill></BsEnvelopeFill>
+                        Contact</NavLink></li>
                 </ul>
               
                 
