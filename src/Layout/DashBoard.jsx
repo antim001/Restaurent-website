@@ -12,9 +12,10 @@ import { FaUtensils } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { LuUsers2 } from "react-icons/lu";
+import useAdmin from './../hooks/useAdmin';
 const DashBoard = () => {
     
-   const isAdmin=true
+   const [isAdmin]=useAdmin()
     return (
         <div className='flex'>
             <div className='w-64 min-h-screen bg-orange-400'>
