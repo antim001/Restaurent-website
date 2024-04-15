@@ -1,5 +1,5 @@
 
-#Bistro-foodie
+## Bistro-foodie
 
 Bistro Foodie is a modern and user-friendly food ordering application designed to offer an effortless and enjoyable dining experience to users. Built with cutting-edge technologies like React, Firebase, and Tailwind CSS, Bistro Foodie brings together the best of frontend and backend development to create a seamless food ordering platform.
 
@@ -21,14 +21,7 @@ Bistro Foodie is a modern and user-friendly food ordering application designed t
 
 - [@octokatherine](https://www.github.com/antim001)
 
-## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
 
 
 ## Client-site-link
